@@ -1,6 +1,6 @@
 const wearos = "https://wear-os.onrender.com"
 const socket_wearos = 'wss://wear-os.onrender.com'
-const local_test = "https://turbo-doodle-49vrwpw6pxqc9wq-5000.app.github.dev"
+const local_test = "https://github-cloud-run-service-ojw7p263za-ey.a.run.app"
 
 const API = {
     wearos,

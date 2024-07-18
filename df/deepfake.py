@@ -4,8 +4,9 @@ from flask import request
 
 app = Flask(__name__)
 
-@app.route('/create-talk', methods=['POST'])
+@app.route('/create-talk', methods=['POST'])    
 def deepfake():
+    print(request.get_json())
     data = request.get_json()
     input = data.get('input')
     url = "https://api.d-id.com/talks"
