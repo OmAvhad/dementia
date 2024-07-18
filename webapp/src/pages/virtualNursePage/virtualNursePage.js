@@ -56,10 +56,10 @@ function VirtualNursePage() {
     };
 
     const getVideo = async (video_id) => {
-      const getVideo = await axios.get("http://127.0.0.1:5000/get-talk?id=" + video_id);
+      const videoResponse = await axios.get("http://127.0.0.1:5000/get-talk?id=" + video_id);
   
       // if undefined, call getVideo again
-      if(getVideo.data.result_url === undefined){
+      if(videoResponse.data.result_url === undefined){
         setTimeout(() => {
           getVideo(video_id);
         }, 2000);
@@ -68,7 +68,7 @@ function VirtualNursePage() {
       const video = document.getElementById("video");
       // set video source
       setLoading(false);
-      video.src = getVideo.data.result_url;
+      video.src = videoResponse.data.result_url;
       video.play();
     }
 
