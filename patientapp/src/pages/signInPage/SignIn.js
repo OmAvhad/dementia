@@ -5,8 +5,10 @@ import profileImage from '../../components/profile.png';
 const SignIn = () => {
     return (
         <div className="SignUp">
-            <div className="Ellipse1"></div>
-            <div className="Ellipse2"></div>
+            <div className="SignUp-img">
+            <img src="signup.png" alt="Brain Icon" className="logo-signup" />
+            </div>
+            
             <div className="Welcome">Welcome!<br/></div>
             <div className="Avatar">
                 <img src={profileImage} alt="Avatar" />

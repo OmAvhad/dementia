@@ -21,7 +21,9 @@
   margin-left: 10px;
 }
 
-.Login .Ellipse1 {
+
+
+.login-img {
   width: 150px;
   height: 150px;
   background: rgba(0, 176, 185, 0.53);
@@ -30,14 +32,13 @@
   left: -59px;
   border-radius: 50%;
 }
-.Login .Ellipse2 {
-  width: 150px;
-  height: 150px;
-  background: rgba(0, 176, 185, 0.53);
-  position: absolute;
-  top: -64px;
-  left: 20px;
-  border-radius: 50%;
+
+.logo-login {
+  width: 100px;
+  height: 100px;
+  margin-bottom: auto;
+  margin-top: 23%;
+  margin-left: 35%;
 }
 
 .Login .WelcomeBack {
