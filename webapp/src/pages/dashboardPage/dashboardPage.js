@@ -4,6 +4,7 @@ import BottomNav from "../../components/bottomNav/bottomNav";
 import DashboardBody from "../../components/dashboardBody/dashboardBody";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import GeneralizedSearch from "../../components/generalizedSearch/generalizedSearch";
 
 function DashboardPage(params) {
     const [ws, setWs] = useState(null);
@@ -39,6 +40,7 @@ function DashboardPage(params) {
     return (
         <div className="bg-[#F7F7F7]">
             <DashboardHeader/>
+            <GeneralizedSearch/>
             <DashboardBody heartRate={heartRate}/>
             <BottomNav/>
         </div>
