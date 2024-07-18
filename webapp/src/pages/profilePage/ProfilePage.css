@@ -1,4 +1,15 @@
-
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html, .Profile {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  
   .Profile {
     display: flex;
     flex-direction: column;
@@ -52,8 +63,8 @@
   }
   
   .profile-details {
-    margin-left: 20px;
-    text-align: left;
+    text-align: center;
+    margin-top: 10px;
   }
   
   .profile-name {
@@ -75,7 +86,7 @@
   }
   
   .profile-fields {
-    width: 100%;
+    width: 90%;
     margin-top: 20px;
   }
   
@@ -105,20 +116,21 @@
   
   .action-buttons {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: space-around;
+    width: 90%;
     margin-top: 20px;
-    padding-bottom: 20px; /* Ensure enough padding to prevent cut-off */
+    padding-bottom: 80px;
   }
   
   .save-button, .cancel-button {
     flex: 1;
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 10px;
     border: none;
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
+    text-align: center;
   }
   
   .save-button {
@@ -129,6 +141,15 @@
   .cancel-button {
     background: #ccc;
     color: black;
+  }
+  @media (max-width: 768px) {
+    .action-buttons {
+      flex-direction: column;
+    }
+  
+    .save-button, .cancel-button {
+      margin: 5px 0;
+    }
   }
   
   .navbar {
@@ -154,13 +175,5 @@
     color: #C6007E;
   }
   
-  @media (max-width: 768px) {
-    .action-buttons {
-      flex-direction: column;
-    }
   
-    .save-button, .cancel-button {
-      margin: 5px 0;
-    }
-  }
   

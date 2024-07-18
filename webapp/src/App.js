@@ -7,6 +7,7 @@ import ChatBotPage from './pages/chatBotPage/chatBotPage';
 import Login from './pages/loginPage/Login';
 import SignIn from './pages/signInPage/SignIn';
 import CommunityPage from './pages/communityPage/communityPage';
+import Onboarding from './pages/onboarding/Onboarding';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,6 +30,7 @@ function App() {
         <Route path='/report' element={<ReportPage />}/>
         <Route path='/schedule' element={<SchedulePage />}/>
         <Route path='/profile' element={<ProfilePage />}/>
+        <Route path='/onboarding' element={<Onboarding />}/>
         <Route path='*' element={<NotFoundPage />}/>
       </Routes>
     </BrowserRouter>
