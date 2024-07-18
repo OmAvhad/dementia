@@ -12,6 +12,7 @@ function VirtualNursePage() {
   const [isLoading, setLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const recognitionRef = useRef(null);
+  const question = "I am diagnosed with dementia stage 2, what diet should I follow?";
 
   const startListening = () => {
     if (!('webkitSpeechRecognition' in window)) {
@@ -35,14 +36,14 @@ function VirtualNursePage() {
           finalTranscript += event.results[i][0].transcript;
         }
       }
-      setText(finalTranscript);
+      setText(question);
 
       if (finalTranscript) {
         recognitionInstance.stop();
         setIsListening(false);
         setLoading(true);
         console.log(finalTranscript);
-        getResponse(finalTranscript).then( async (data) => {
+        getResponse(question).then( async (data) => {
         const createVideo = await axios.post(API.local_test+"/create-talk", { input: data.answer });
         console.log(createVideo);
         const video_id = createVideo.data.id;
