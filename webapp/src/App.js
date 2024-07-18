@@ -18,7 +18,7 @@ import SchedulePage from './pages/schedulePage/schedulePage';
 import SplashScreen from './pages/splashScreenpage/SplashScreen';
 import Level from './pages/level/Level';
 import FileUpload from './pages/uploadSensorData/UploadFile';
-
+import VirtualNursePage from './pages/virtualNursePage/virtualNursePage';
 
 function App() {
   return (
@@ -39,6 +39,7 @@ function App() {
         <Route path='/splashscreen' element={<SplashScreen />}/>
         <Route path='/level' element={<Level/>}/>
         <Route path='/uploadfile' element={<FileUpload/>}/>
+        <Route path='/virtualnurse' element={<VirtualNursePage/>}/>
         <Route path='*' element={<NotFoundPage />}/>
       </Routes>
     </BrowserRouter>
