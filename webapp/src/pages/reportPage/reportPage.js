@@ -28,7 +28,7 @@ function ReportPage() {
         websocket.onmessage = (evt) => {
             const message = (evt.data);
             const data = JSON.parse(message);
-            if(data.heartRate > 100){
+            if(data.heartRate > 120){
                 toast.error('Heart rate is too high!');
             }
             // pop the first element and append the new value
