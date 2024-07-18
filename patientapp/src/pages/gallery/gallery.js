@@ -1,34 +1,54 @@
-// Dashboard.js
-import React from 'react';
+// Gallery.js
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './gallery.css';
+import { FaArrowLeft } from 'react-icons/fa';
+
+const images = [
+  'f1.png',
+  'p2.png',
+  'p3.png',
+  'p4.png',
+  'p5.png',
+  'p6.png',
+  // Add more image paths here
+];
 
 const Gallery = () => {
-  const handleLinkClick = (url) => {
-    window.location.href = url;
+  const [selectedImage, setSelectedImage] = useState(null);
+  const navigate = useNavigate();
+
+  const openModal = (src) => {
+    setSelectedImage(src);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  const goBack = () => {
+    navigate(-1);
   };
 
   return (
     <div className="gallery-container">
-      
-      <div className="grid">
-        <div className="grid-item" onClick={() => handleLinkClick('/gallery')}>
-          <img src="gallery.png" alt="Gallery" />
-          <p>Gallery</p>
-        </div>
-        <div className="grid-item" onClick={() => handleLinkClick('/match')}>
-          <img src="play.png" alt="Games" />
-          <p>Games</p>
-        </div>
-        <div className="grid-item" onClick={() => handleLinkClick('/repeat-words')}>
-          <img src="repeat.png" alt="Repeat  Words" />
-          <p>Repeat  Words</p>
-        </div>
-        <div className="grid-item" onClick={() => handleLinkClick('/contacts')}>
-          <img src="contacts.png" alt="Contacts" />
-          <p>Contacts</p>
-        </div>
-      
+      <div className="header">
+        <FaArrowLeft className="back-button" onClick={goBack} />
+        <h1>Image Gallery</h1>
       </div>
+      <div className="scrollable-gallery">
+        {images.map((src, index) => (
+          <div className="image-item" key={index} onClick={() => openModal(src)}>
+            <img src={src} alt={`Image ${index + 1}`} />
+          </div>
+        ))}
+      </div>
+      {selectedImage && (
+        <div className="modal">
+          <button className="close-button" onClick={closeModal}>✖</button>
+          <img src={selectedImage} alt="Selected" />
+        </div>
+      )}
     </div>
   );
 };

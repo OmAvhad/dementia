@@ -4,6 +4,7 @@ import "./dashboardBody.css";
 import scheduleIcon from "../../images/scheduleIcon.png"; // Replace with your icon/image
 import nurseIcon from "../../images/nurseIcon.png"; // Replace with your icon/image
 import activityIcon from "../../images/activityIcon.png"; // Replace with your icon/image
+import Activities from "../../pages/activities/activities";
 
 function DashboardBody({ heartRate }) {
   return (
