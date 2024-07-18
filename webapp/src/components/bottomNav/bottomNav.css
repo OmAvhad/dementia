@@ -1,6 +1,7 @@
 .bottom-nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    background-color: white;
     flex-direction: row;
     width: 100vw;
     height: 4rem;

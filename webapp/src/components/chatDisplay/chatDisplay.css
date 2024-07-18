@@ -1,0 +1,76 @@
+.chat-box {
+    position: relative;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    width: fit-content;
+    max-width: 80%;
+}
+
+.chat-box p {
+    margin: 0;
+    color: #f5f5f5;
+}
+
+.chat-box.sender {
+    background-color: rgb(158, 158, 158);
+    align-self: flex-end;
+}
+
+.chat-box.receiver {
+    background-color: rgb(158, 158, 158);
+    align-self: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box.sender::before {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    right: -15px;
+    width: 15px;
+    height: 20px;
+    z-index: 9;
+    border-radius: 0 0 0 20px;
+    background: #fff;
+}
+
+.chat-box.sender::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -8px;
+    width: 15px;
+    height: 15px;
+    background: rgb(158, 158, 158);
+}
+
+.chat-box.receiver::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    width: 15px;
+    height: 20px;
+    z-index: 9;
+    border-radius: 0 0 20px 0;
+    background: #fff;
+}
+
+.chat-box.receiver::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background: rgb(158, 158, 158);
+}
+
+.status {
+    display: block;
+    font-size: 0.8em;
+    color: #ccc;
+    margin-top: 5px;
+}
