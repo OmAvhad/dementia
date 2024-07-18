@@ -8,6 +8,7 @@ import Login from './pages/loginPage/Login';
 import SignIn from './pages/signInPage/SignIn';
 import CommunityPage from './pages/communityPage/communityPage';
 import Onboarding from './pages/onboarding/Onboarding';
+import RAG from './pages/rag/RAG'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -33,6 +34,7 @@ function App() {
         <Route path='/report' element={<ReportPage />}/>
         <Route path='/schedule' element={<SchedulePage />}/>
         <Route path='/profile' element={<ProfilePage />}/>
+        <Route path='/rag' element={<RAG />}/>
         <Route path='/onboarding' element={<Onboarding />}/>
         <Route path='/splashscreen' element={<SplashScreen />}/>
         <Route path='/level' element={<Level/>}/>
