@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import DashboardHeader from "../../components/dashboardHeader/dashboardHeader";
 import { LineChart } from '@mui/x-charts';
 import axios from 'axios';
+import BottomNav from "../../components/bottomNav/bottomNav";
 import { toast } from "react-toastify";
 
 function ReportPage() {
@@ -69,6 +70,7 @@ function ReportPage() {
                 height={300}
                 />
             </div>
+            <BottomNav/>
         </>
     )
 }

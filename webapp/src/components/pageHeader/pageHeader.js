@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function PageHeader({title}) {
 
   return (
     <div className="h-[6vh] pt-2 w-full flex justify-center align-center">
+      <Link to="/">
+      
       <div className="absolute top-0 left-0 mt-2 ml-3">
         <svg
           width="30"
@@ -31,6 +34,7 @@ function PageHeader({title}) {
           </defs>
         </svg>
       </div>
+          </Link>
 
       <div className="text-2xl">
         {title}

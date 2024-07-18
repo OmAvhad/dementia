@@ -1,5 +1,6 @@
 import React from "react";
 import DashboardHeader from "../../components/dashboardHeader/dashboardHeader";
+import BottomNav from "../../components/bottomNav/bottomNav";
 
 function SchedulePage() {
     return (
@@ -17,6 +18,7 @@ function SchedulePage() {
             </div>
             </div>
             </div>
+            <BottomNav/>
         </>
     )
 }

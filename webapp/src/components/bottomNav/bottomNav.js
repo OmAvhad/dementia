@@ -66,7 +66,7 @@ function BottomNav() {
           </div>
         </div>
       </Link>
-      <Link to="/report">
+      <Link to="/community">
         <div class="nav-slot bg-white flex align-center justify-center">
           <div class="nav-link">
             <div className="flex align-center justify-center">
