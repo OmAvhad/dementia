@@ -1,6 +1,12 @@
 import json
 from flask import Blueprint, request
-from run import chat_engine
+# from run import chat_engine
+import google.generativeai as genai
+import os
+from run import gemeni_api_key
+
+genai.configure(api_key=gemeni_api_key)
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 main_bp = Blueprint('main', __name__)
 
@@ -13,7 +19,13 @@ def query():
     # get query
     query = request.args.get('query')
     
-    # fetch response
-    response = chat_engine.chat(query)
+    prompt = "Answer like a professional and caring admiral nurse to the following question: " + query
     
-    return json.dumps({"response": response.response})
+    # fetch response
+    response = model.generate_content(prompt)
+
+    # extract the generated content from the response
+    generated_content = response.text
+
+    # return the generated content as the response
+    return json.dumps({"response": generated_content})

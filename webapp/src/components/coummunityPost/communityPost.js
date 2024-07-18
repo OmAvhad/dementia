@@ -1,20 +1,21 @@
 import React from "react";
+import "./communityPost.css"
 
 function communityPost() {
   return (
-    <>
+    <div className="mt-4">
       <div class="tweetEntry">
         <div class="tweetEntry-content">
           <a class="tweetEntry-account-group" href="[accountURL]">
             <img
               class="tweetEntry-avatar"
-              src="http://placekitten.com/200/200"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieWLCSvzkGE1CuhCa90wc2bBaze0bz7iBoA&s"
             />
 
-            <strong class="tweetEntry-fullname">[fullname]</strong>
+            <strong class="tweetEntry-fullname">Abhishek Upadhyay</strong>
 
             <span class="tweetEntry-username">
-              @<b>[username]</b>
+              @<b>[megablaziken]</b>
             </span>
 
             <span class="tweetEntry-timestamp">- [timestamp]</span>
@@ -28,16 +29,16 @@ function communityPost() {
         </div>
 
         <div class="optionalMedia">
-          <img class="optionalMedia-img" src="http://placekitten.com/500/400" />
+          <img class="optionalMedia-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieWLCSvzkGE1CuhCa90wc2bBaze0bz7iBoA&s" />
         </div>
 
         <div
           class="tweetEntry-action-list"
-          style="line-height:24px;color: #b1bbc3;"
+          style={{"line-height":"24px", "color": "#b1bbc3"}}
         >
-          <i class="fa fa-reply" style="width: 80px;"></i>
-          <i class="fa fa-retweet" style="width: 80px"></i>
-          <i class="fa fa-heart" style="width: 80px"></i>
+          <i class="fa fa-reply" style={{"width": "80px"}}></i>
+          <i class="fa fa-retweet" style={{"width": "80px"}}></i>
+          <i class="fa fa-heart" style={{"width": "80px"}}></i>
         </div>
       </div>
 
@@ -46,13 +47,13 @@ function communityPost() {
           <a class="tweetEntry-account-group" href="[accountURL]">
             <img
               class="tweetEntry-avatar"
-              src="http://placekitten.com/100/100"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieWLCSvzkGE1CuhCa90wc2bBaze0bz7iBoA&s"
             />
 
-            <strong class="tweetEntry-fullname">[fullname]</strong>
+            <strong class="tweetEntry-fullname">[Abhishek Upadhyay]</strong>
 
             <span class="tweetEntry-username">
-              @<b>[username]</b>
+              @<b>[megablaziken]</b>
             </span>
 
             <span class="tweetEntry-timestamp">- [timestamp]</span>
@@ -65,23 +66,23 @@ function communityPost() {
           </div>
         </div>
 
-        <div class="optionalMedia" style="display:none;">
+        <div class="optionalMedia" style={{"display": "none"}}>
           <img
             class="optionalMedia-img"
-            src="https://i.imgur.com/kOhhPAk.jpg"
+            style={{"line-height":"24px", "color": "#b1bbc3"}}
           />
         </div>
 
         <div
           class="tweetEntry-action-list"
-          style="line-height:24px;color: #b1bbc3;"
+          style={{"line-height":"24px", "color": "#b1bbc3"}}
         >
-          <i class="fa fa-reply" style="width: 80px;"></i>
-          <i class="fa fa-retweet" style="width: 80px"></i>
-          <i class="fa fa-heart" style="width: 80px"></i>
+          <i class="fa fa-reply" style={{"width": "80px"}}></i>
+          <i class="fa fa-retweet" style={{"width": "80px"}}></i>
+          <i class="fa fa-heart" style={{"width": "80px"}}></i>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -24,8 +24,7 @@ const dummy = [
   { message: "Hello, I am fine!", type: "receiver" },
 ];
 
-function ChatDisplay() {
-  const [chatsList, setChatsList] = useState(dummy);
+function ChatDisplay({chatsList}) {
 
   return (
     <div className="max-h-[83vh] overflow-y-scroll w-full px-4">
