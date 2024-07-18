@@ -24,12 +24,12 @@ import PersonlizedSearch from "./pages/personlizedSearchPage/personlizedSearchPa
 function App() {
   return (
     <>
-      <ToastContainer /> 
+      <ToastContainer style={{ height: '50vh' }} /> 
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<DashboardPage />}/>
         <Route path='/login' element={<Login />}/>
-        <Route path='/signin' element={<SignIn />}/>
+        <Route path='/signup' element={<SignIn />}/>
         <Route path='/chatbot' element={<ChatBotPage />}/>
         <Route path='/community' element={<CommunityPage />}/>
         <Route path='/report' element={<ReportPage />}/>

@@ -14,7 +14,8 @@ const Login = () => {
       <div className="TextField">
         <input type="password" className="Placeholder" placeholder="Enter password" />
       </div>
-      <button className="Button">Log In</button>
+      
+      <button className="Button" onClick={()=>window.location.href = "/"} >Log In</button>
       <div className="or-container">
         <div className="Vector1"></div>
         <div className="Or">OR</div>

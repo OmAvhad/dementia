@@ -20,7 +20,7 @@ function DashboardPage(params) {
         websocket.onmessage = (evt) => {
             const message = (evt.data);
             const data = JSON.parse(message);
-            if(data.heartRate > 100){
+            if(data.heartRate > 140){
                 toast.error('Heart rate is too high!');
             }
             setHeartRate(data.heartRate);

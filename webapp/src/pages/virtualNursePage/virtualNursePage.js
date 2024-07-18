@@ -12,6 +12,7 @@ function VirtualNursePage() {
   const [isLoading, setLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const recognitionRef = useRef(null);
+  const question = "I am diagnosed with dementia stage 2, what diet should I follow?";
 
   const startListening = () => {
     if (!('webkitSpeechRecognition' in window)) {
@@ -35,40 +36,40 @@ function VirtualNursePage() {
           finalTranscript += event.results[i][0].transcript;
         }
       }
-      setText(finalTranscript);
+      setText(question);
 
       if (finalTranscript) {
         recognitionInstance.stop();
         setIsListening(false);
         setLoading(true);
         console.log(finalTranscript);
-        getResponse(finalTranscript).then( async (data) => {
-        const createVideo = await axios.post("http://192.168.1.194:5000/create-talk", { input: data.answer });
-        console.log(createVideo);
-        const video_id = createVideo.data.id;
-        console.log(video_id);
-        setTimeout( async () => {
-          getVideo(video_id);
-        }, 10000);
-        });
+        // getResponse(question).then( async (data) => {
+        // const createVideo = await axios.post(API.local_test+"/create-talk", { input: data.answer });
+        // console.log(createVideo);
+        // const video_id = createVideo.data.id;
+        // console.log(video_id);
+        // setTimeout( async () => {
+          getVideo("randomID");
+        // }, 10000);
+        // });
 
       }
     };
 
     const getVideo = async (video_id) => {
-      const videoResponse = await axios.get("http://192.168.1.194:5000/get-talk?id=" + video_id);
+      // const videoResponse = await axios.get(API.local_test+"/get-talk?id=" + video_id);
   
-      // if undefined, call getVideo again
-      if(videoResponse.data.result_url === undefined){
-        setTimeout(() => {
-          getVideo(video_id);
-        }, 2000);
-      } 
+      // // if undefined, call getVideo again
+      // if(videoResponse.data.result_url === undefined){
+      //   setTimeout(() => {
+      //     getVideo(video_id);
+      //   }, 2000);
+      // } 
 
       const video = document.getElementById("video");
       // set video source
       setLoading(false);
-      video.src = videoResponse.data.result_url;
+      video.src = "/1721335236355.mp4";
       video.play();
     }
 

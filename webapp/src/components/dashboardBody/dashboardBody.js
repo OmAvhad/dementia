@@ -237,17 +237,17 @@ function DashboardBody({heartRate}) {
                     12:00 PM
                 </div>
                 <div className="event-body ml-3 flex justify-start items-center px-1">
-                    Daily Checkups
+                    Lunch
                 </div>
             </div>
         </div>
         <div className="mt-2 mb-1">
             <div className="upcoming-event p-2 w-full flex flex-row justify-start items-center">
                 <div className="event-time flex justify-start items-center px-1">
-                    12:00 PM
+                    2:00 PM
                 </div>
                 <div className="event-body ml-3 flex justify-start items-center px-1">
-                    Daily Checkups
+                    Doctor Appointment
                 </div>
             </div>
         </div>

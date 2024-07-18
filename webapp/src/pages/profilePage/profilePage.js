@@ -6,10 +6,10 @@ import BottomNav from '../../components/bottomNav/bottomNav';
 function ProfilePage() {
     const [editable, setEditable] = useState(false);
   const [profile, setProfile] = useState({
-    name: 'Prajwal Dhule',
+    name: 'Abhishek Upadhyay',
     description: 'Computer, Final Year',
-    email: 'VincentMcMahon@gmail.com',
-    number: '9823232398',
+    email: 'megablazikenabhishek@gmail.com',
+    number: '7977626653',
     dob: '14th August, 2003',
     address: 'A-702, Saraswati Building, Vashi West, Mumbai 400067'
   });
@@ -39,10 +39,6 @@ function ProfilePage() {
         <div className="Profile">
       <div className="header">
         <button className="back-button">←</button>
-        <div className="icons">
-          <button className="icon-button">🔔</button>
-          <button className="icon-button">📄</button>
-        </div>
       </div>
       <div className="profile-info">
         <div className="profile-image">

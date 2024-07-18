@@ -4,8 +4,9 @@ from flask import request
 
 app = Flask(__name__)
 
-@app.route('/create-talk', methods=['POST'])
+@app.route('/create-talk', methods=['POST'])    
 def deepfake():
+    print(request.get_json())
     data = request.get_json()
     input = data.get('input')
     url = "https://api.d-id.com/talks"
@@ -29,7 +30,7 @@ def deepfake():
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "authorization": "Basic ZG9mb3dlbjE2NUB0aWVydmlvLmNvbQ:irbc__Idwai_gKObRhoH_"
+        "authorization": "Basic dGl5b25hcDYwN0BzdGlrZXp6LmNvbQ:GZkW6GOV_zzNXAyHcqb2X"
     }
 
     response = requests.post(url, json=payload, headers=headers)
@@ -44,7 +45,7 @@ def get_deepfake():
     
     headers = {
         "accept": "application/json",
-        "authorization": "Basic ZG9mb3dlbjE2NUB0aWVydmlvLmNvbQ:irbc__Idwai_gKObRhoH_"
+        "authorization": "Basic dGl5b25hcDYwN0BzdGlrZXp6LmNvbQ:GZkW6GOV_zzNXAyHcqb2X"
     }
     
     response = requests.get(url, headers=headers)
