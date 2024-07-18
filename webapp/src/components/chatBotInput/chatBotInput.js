@@ -2,6 +2,7 @@ import React from "react";
 import "./chatBotInput.css";
 import { useState } from "react";
 import axios from "axios";
+import API from "../../api";
 
 function ChatBotInput({pushChat}) {
   const [query, setQuery] = useState("");
@@ -15,7 +16,7 @@ function ChatBotInput({pushChat}) {
 
   const getResponse = async (query) => {
     // axios post
-    const response = await axios.post("https://wear-os.onrender.com/chatbot", { message: query });
+    const response = await axios.post(API.wearos+"/chatbot", { message: query });
     console.log(response.data);
     // check if response.data is not empty by checking response.data.answer
     if(response.data.answer){
