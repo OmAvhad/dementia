@@ -17,6 +17,8 @@ import ProfilePage from './pages/profilePage/profilePage';
 import SchedulePage from './pages/schedulePage/schedulePage';
 import SplashScreen from './pages/splashScreenpage/SplashScreen';
 import Level from './pages/level/Level';
+import Activities from './pages/activities/activities';
+import Gallery from './pages/gallery/gallery';
 import SpeechTherapy from './pages/speechTherapy/SpeechTherapy';
 import Contacts from './pages/contacts/Contacts';
 import QuizGame from './pages/quizgame/QuizGame';
@@ -42,6 +44,10 @@ function App() {
         <Route path='/onboarding' element={<Onboarding />}/>        
         <Route path='/splashscreen' element={<SplashScreen />}/>
         <Route path='/level' element={<Level/>}/>
+        <Route path='/activity' element={<Activities/>}/>
+        <Route path='/gallery' element={<Gallery/>}/>
+
+        
         <Route path='/quizgame' element={<QuizGame/>}/>
       </Routes>
     </BrowserRouter>
