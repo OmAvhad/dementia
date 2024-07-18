@@ -7,7 +7,8 @@ import ChatBotPage from './pages/chatBotPage/chatBotPage';
 import Login from './pages/loginPage/Login';
 import SignIn from './pages/signInPage/SignIn';
 import CommunityPage from './pages/communityPage/communityPage';
-
+import SplashScreen from './pages/splashScreenpage/SplashScreen';
+import Level from './pages/level/Level';
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,9 @@ function App() {
         <Route path='/chatbot' element={<ChatBotPage />}/>
         <Route path='/community' element={<CommunityPage />}/>
         <Route path='*' element={<NotFoundPage />}/>
+        <Route path='/splashscreen' element={<SplashScreen />}/>
+        <Route path='/level' element={<Level/>}/>
+        
       </Routes>
     </BrowserRouter>
   );
