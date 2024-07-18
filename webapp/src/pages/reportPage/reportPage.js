@@ -4,6 +4,8 @@ import { LineChart } from '@mui/x-charts';
 import axios from 'axios';
 import BottomNav from "../../components/bottomNav/bottomNav";
 import { toast } from "react-toastify";
+import API from "../../api";
+import CircularProgress from "@mui/material/CircularProgress"
 
 function ReportPage() {
     const [ data, setData ] = useState([]);
@@ -16,7 +18,7 @@ function ReportPage() {
     const [ws, setWs] = useState(null);
     
     useEffect(() => {
-        const websocket = new WebSocket('wss://wear-os.onrender.com');
+        const websocket = new WebSocket(API.socket_wearos);
     
         websocket.onopen = () => {
             console.log('WebSocket is connected');
@@ -45,7 +47,7 @@ function ReportPage() {
     }, []);
 
     const getHeartRate = async () => {
-        const response = await axios.get('http://192.168.1.194:8080/heartRate');
+        const response = await axios.get(API.wearos+'/heartRate');
         let values = [];
         for (let i = 0; i < response.data.length; i++) {
             console.log(response.data[i]);
@@ -57,19 +59,25 @@ function ReportPage() {
     return (
         <>
             <DashboardHeader/>
-            <div className="w-full flex flex-col justify-center items-center">
-                <LineChart
-                xAxis={[{ data: [5, 10, 15, 20, 25, 30, 40, 45, 50] }]}
-                series={[
-                    {
-                        data: data,
-                        color: 'red',
-                    },
-                ]}
-                width={400}
-                height={300}
-                />
-            </div>
+            {data.length===0 ? (
+                <div className="w-full flex justify-center align-center">
+                    <CircularProgress/>
+                </div>
+            ) : (
+                <div className="w-full flex flex-col justify-center items-center">
+                    <LineChart
+                    xAxis={[{ data: [5, 10, 15, 20, 25, 30, 40, 45, 50] }]}
+                    series={[
+                        {
+                            data: data,
+                            color: 'red',
+                        },
+                    ]}
+                    width={400}
+                    height={300}
+                    />
+                </div>
+            )}
             <BottomNav/>
         </>
     )

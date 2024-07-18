@@ -5,13 +5,14 @@ import DashboardBody from "../../components/dashboardBody/dashboardBody";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import GeneralizedSearch from "../../components/generalizedSearch/generalizedSearch";
+import API from "../../api";
 
 function DashboardPage(params) {
     const [ws, setWs] = useState(null);
     const [heartRate, setHeartRate] = useState(0);
     
     useEffect(() => {
-        const websocket = new WebSocket('wss://wear-os.onrender.com');
+        const websocket = new WebSocket(API.socket_wearos);
     
         websocket.onopen = () => {
             console.log('WebSocket is connected');
