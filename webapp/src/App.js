@@ -19,7 +19,7 @@ import SplashScreen from './pages/splashScreenpage/SplashScreen';
 import Level from './pages/level/Level';
 import FileUpload from './pages/uploadSensorData/UploadFile';
 import VirtualNursePage from "./pages/virtualNursePage/virtualNursePage"
-import PersonlizedSearch from "./pages/personlizedSearchPage/personlizedSearchPage"
+import PersonlizedSearch from "./pages/personlizedSearchPage/personlizedSearchPage";
 
 function App() {
   return (

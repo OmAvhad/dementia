@@ -4,8 +4,9 @@ from flask import request
 
 app = Flask(__name__)
 
-@app.route('/create-talk', methods=['POST'])
+@app.route('/create-talk', methods=['POST'])    
 def deepfake():
+    print(request.get_json())
     data = request.get_json()
     input = data.get('input')
     url = "https://api.d-id.com/talks"
@@ -24,12 +25,12 @@ def deepfake():
                     "fluent": "false",
                     "pad_audio": "0.0"
                 },
-                "source_url": "https://womensagenda.com.au/wp-content/uploads/2021/03/yasmin_poole.png"
+                "source_url": "https://i.ibb.co/DGPMBwK/nurse.jpg"
             }
     headers = {
         "accept": "application/json",
         "content-type": "application/json",
-        "authorization": "Basic b21raGFuZHUyMDE3QGdtYWlsLmNvbQ:9LdEkk1gvp-2MMgL9izxV"
+        "authorization": "Basic dGl5b25hcDYwN0BzdGlrZXp6LmNvbQ:GZkW6GOV_zzNXAyHcqb2X"
     }
 
     response = requests.post(url, json=payload, headers=headers)
@@ -44,7 +45,7 @@ def get_deepfake():
     
     headers = {
         "accept": "application/json",
-        "authorization": "Basic YjIxcmFHRnVaSFV5TURFM1FHZHRZV2xzTG1OdmJROjlMZEVrazFndnAtMk1NZ0w5aXp4Vg=="
+        "authorization": "Basic dGl5b25hcDYwN0BzdGlrZXp6LmNvbQ:GZkW6GOV_zzNXAyHcqb2X"
     }
     
     response = requests.get(url, headers=headers)
@@ -56,4 +57,4 @@ if __name__ == '__main__':
     # add cors
     from flask_cors import CORS
     CORS(app)
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0') 
