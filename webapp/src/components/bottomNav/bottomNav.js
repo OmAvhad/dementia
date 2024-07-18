@@ -48,7 +48,7 @@ function BottomNav() {
         </div>
       </div>
       </Link>
-      <Link to="/chatbot">
+      <Link to="/nurse">
         <div class="nav-slot curve ">
           <div class="floating-button pl-[3px] pt-[3px]">
            <img src="/nurse.png" alt="" />
