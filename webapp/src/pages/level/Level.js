@@ -6,7 +6,8 @@ function Level() {
   const [selectedStage, setSelectedStage] = useState('');
 
   const handleNextClick = () => {
-    alert(`Selected year: ${selectedYear}, Selected stage: ${selectedStage}`);
+    window.location.href = "/login"
+    // alert(`Selected year: ${selectedYear}, Selected stage: ${selectedStage}`);
   };
 
   const generateYearOptions = () => {
@@ -63,9 +64,27 @@ function Level() {
             ))}
           </select>
         </div>
-        <button type="button" className="next-button" onClick={handleNextClick}>Next</button>
+        <div className="form-group">
+          <label htmlFor="dementiaType">Any Other Medical Conditions</label>
+          <select id="dementiaType" className="form-control">
+            <option>Select Option</option>
+            <option>Diabetes</option>
+            <option>Hypertension</option>
+            <option>Heart Disease</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="dementiaType">Medications You Take</label>
+          <select id="dementiaType" className="form-control">
+            <option>Select Option</option>
+            <option>Metformin</option>
+            <option>Lisinopril</option>
+            <option>Donepezil</option>
+            <option>Atorvastatin</option>
+          </select>
+        </div>
+        <button type="button" className="next-button" onClick={handleNextClick}>Save</button>
       </form>
-      <div className="bottom-bar-level"></div>
     </div>
   );
 }
