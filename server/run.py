@@ -31,9 +31,10 @@ credentials, _ = google.auth.default()
 
 load_dotenv()
 
-gemeni_api_key = os.getenv('GOOGLE_API_KEY')
-genai.configure(api_key=gemeni_api_key)
-vertexai.init(project="gen-lang-client-0064345111")
+google_api_key = os.getenv('GOOGLE_API_KEY')
+genai.configure(api_key=google_api_key)
+vertexai.init(project="gen-lang-client-0193117932")
+
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 # get lama index
