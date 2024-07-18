@@ -14,7 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import ReportPage from './pages/reportPage/reportPage';
 import ProfilePage from './pages/profilePage/profilePage';
 import SchedulePage from './pages/schedulePage/schedulePage';
-import SplashScreen from './pages/splashscreen/SplashScreen';
+import SplashScreen from "./pages/splashScreenpage/SplashScreen"
 import Level from './pages/level/Level';
 
 
