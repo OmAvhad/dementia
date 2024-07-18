@@ -1,0 +1,185 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 20px;
+}
+
+.Login .status-bar {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  background: white;
+}
+
+.Login .status-bar span {
+  margin-left: 10px;
+}
+
+.Login .Ellipse1 {
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 176, 185, 0.53);
+  position: absolute;
+  top: -28px;
+  left: -59px;
+  border-radius: 50%;
+}
+.Login .Ellipse2 {
+  width: 150px;
+  height: 150px;
+  background: rgba(0, 176, 185, 0.53);
+  position: absolute;
+  top: -64px;
+  left: 20px;
+  border-radius: 50%;
+}
+
+.Login .WelcomeBack {
+  margin-top: 60px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.Login .TextField {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  margin: 10px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.Login .Placeholder {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.38);
+  background: transparent;
+}
+
+.Login .Placeholder:focus {
+  outline: none;
+}
+
+.Login .Button, .Login .GoogleButton {
+  width: 100%;
+  max-width: 400px;
+  height: 60px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 77px;
+  font-size: 19px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.Login .Button {
+  background: #00B0B9;
+}
+
+.Login .Button:hover {
+  background: #008b8b;
+  transform: scale(1.05);
+}
+
+.Login .GoogleButton {
+  background: #C6007E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Login .GoogleButton:hover {
+  background: #a5006b;
+  transform: scale(1.05);
+}
+
+.Login .or-container {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+.Login .Vector1, .Login .Vector2 {
+  flex: 1;
+  height: 1px;
+  background: black;
+}
+
+.Login .Or {
+  margin: 0 10px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.Login .ForgotPassword, .Login .SignUp {
+  color: #00B0B9;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.Login .ForgotPassword:hover, .Login .SignUp:hover {
+  text-decoration: underline;
+}
+
+.Login .AccountOptions {
+  text-align: center;
+  color: #49467E;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.Login .AccountOptions .SignUp {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.Login .BarsHomeIndicator {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.Login .BarsHomeIndicator .Line {
+  width: 100px;
+  height: 5px;
+  background: black;
+  border-radius: 100px;
+}
+
+@media (min-width: 768px) {
+  .Login {
+    width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+}
