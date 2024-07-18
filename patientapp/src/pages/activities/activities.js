@@ -23,11 +23,11 @@ const Activities = () => {
             <img src="gallery.png" alt="Gallery" />
             <p><b>Gallery</b></p>
             </div>
-            <div className="grid-item" onClick={() => handleLinkClick('/match')}>
+            <div className="grid-item" onClick={() => handleLinkClick('/quizgame')}>
             <img src="play.png" alt="Games" />
             <p><b>Games</b></p>
             </div>
-            <div className="grid-item" onClick={() => handleLinkClick('/repeat-words')}>
+            <div className="grid-item" onClick={() => handleLinkClick('/speechtherapy')}>
             <img src="repeat.png" alt="Repeat  Words" />
             <p><b>Repeat  Words</b></p>
             </div>

@@ -43,13 +43,15 @@ const Contacts = () => {
                 <div className="contacts-grid">
                     {contacts.map((contact, index) => (
                         <div key={index} className="contact-card">
-                            <img src={contact.profile} alt={`${contact.name}'s profile`} className="profile-pic" />
-                            <div className="contact-info">
-                                <h3 className="contact-name">{contact.name}</h3>
-                                <p className="contact-number">{contact.number}</p>
-                                <p className="contact-relationship">{contact.relationship}</p>
+                                <img src={contact.profile} alt={`${contact.name}'s profile`} className="profile-pic" />
+                                <a href={`tel:${contact.number}`}>
+                                <div className="contact-info">
+                                    <h3 className="contact-name">{contact.name}</h3>
+                                    <p className="contact-number">{contact.number}</p>
+                                    <p className="contact-relationship">{contact.relationship}</p>
+                                </div>
+                                </a>
                             </div>
-                        </div>
                     ))}
                 </div>
             </div>
