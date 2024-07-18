@@ -20,6 +20,7 @@ import Level from './pages/level/Level';
 import FileUpload from './pages/uploadSensorData/UploadFile';
 
 
+
 function App() {
   return (
     <>
@@ -35,7 +36,7 @@ function App() {
         <Route path='/schedule' element={<SchedulePage />}/>
         <Route path='/profile' element={<ProfilePage />}/>
         <Route path='*' element={<NotFoundPage />}/>
-
+        
         <Route path='/rag' element={<RAG />}/>
         <Route path='/onboarding' element={<Onboarding />}/>        
         <Route path='/splashscreen' element={<SplashScreen />}/>
