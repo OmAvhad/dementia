@@ -17,6 +17,7 @@ import ProfilePage from './pages/profilePage/profilePage';
 import SchedulePage from './pages/schedulePage/schedulePage';
 import SplashScreen from './pages/splashScreenpage/SplashScreen';
 import Level from './pages/level/Level';
+import FileUpload from './pages/uploadSensorData/UploadFile';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path='*' element={<NotFoundPage />}/>
         <Route path='/splashscreen' element={<SplashScreen />}/>
         <Route path='/level' element={<Level/>}/>
+        <Route path='/uploadfile' element={<FileUpload/>}/>
         
       </Routes>
     </BrowserRouter>

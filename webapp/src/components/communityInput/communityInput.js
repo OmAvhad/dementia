@@ -3,7 +3,7 @@ import "./communityInput.css";
 
 function ChatBotInput() {
   return (
-    <div className="h-[12vh] w-full bg-white px-2 mb-2 mt-8 flex justify-between items-center">
+    <div className="h-[12vh] w-full bg-white px-2 mb-2 mt-2 flex justify-between items-center">
       <div className="w-[100%]">
         <div class="chatinput-container">
           <input
