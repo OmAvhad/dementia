@@ -78,19 +78,12 @@ function ReportPage() {
                         height={300}
                         grid={{ vertical: true, horizontal: true }}
                     />
-                    <h2><b>Week Pattern</b></h2>
-                    <BarChart
-                        yAxis={[{ scaleType: 'band', data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] }]}
-                        series={[
-                            {
-                                data: [10, 5, 15, 20, 25, 30, 40],
-                                color: 'green',
-                            },
-                        ]}
-                        layout="horizontal"
-                        width={400}
-                        height={300}
-                    />
+                    <h2><b>Walking Week Pattern</b></h2>
+                    <img src="/weekly.jpg" alt="" width={400}
+                        height={300}/>
+                    <h2><b>Walking Monthly Pattern</b></h2>
+                    <img src="/monthly.jpg" alt="" width={400}
+                        height={300}/>
                 </div>
             )}
             <BottomNav/>
