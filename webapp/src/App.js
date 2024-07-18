@@ -13,6 +13,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import ReportPage from './pages/reportPage/reportPage';
 import ProfilePage from './pages/profilePage/profilePage';
 import SchedulePage from './pages/schedulePage/schedulePage';
+import SplashScreen from './pages/splashscreen/SplashScreen';
+import Level from './pages/level/Level';
 
 
 function App() {
