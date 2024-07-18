@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import NotFoundPage from './pages/notFoundPage/notFoundPage';
@@ -10,16 +10,13 @@ import CommunityPage from './pages/communityPage/communityPage';
 import Onboarding from './pages/onboarding/Onboarding';
 import RAG from './pages/rag/RAG'
 
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReportPage from './pages/reportPage/reportPage';
 import ProfilePage from './pages/profilePage/profilePage';
 import SchedulePage from './pages/schedulePage/schedulePage';
 import SplashScreen from './pages/splashScreenpage/SplashScreen';
 import Level from './pages/level/Level';
-import FileUpload from './pages/uploadSensorData/UploadFile';
-
-
 
 function App() {
   return (
@@ -41,7 +38,6 @@ function App() {
         <Route path='/onboarding' element={<Onboarding />}/>        
         <Route path='/splashscreen' element={<SplashScreen />}/>
         <Route path='/level' element={<Level/>}/>
-        <Route path='/uploadfile' element={<FileUpload/>}/>
         
       </Routes>
     </BrowserRouter>
