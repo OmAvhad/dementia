@@ -1,5 +1,6 @@
 import React from 'react';
 import './SignIn.css';
+import profileImage from '../../components/profile.png';
 
 const SignIn = () => {
     return (
@@ -8,7 +9,7 @@ const SignIn = () => {
             <div className="Ellipse2"></div>
             <div className="Welcome">Welcome!<br/></div>
             <div className="Avatar">
-                <img src="https://via.placeholder.com/100" alt="Avatar" />
+                <img src={profileImage} alt="Avatar" />
             </div>
             <div className="TextField">
                 <input type="text" className="Placeholder" placeholder="Enter Full name" />
