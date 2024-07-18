@@ -1,7 +1,6 @@
 .heart-rate {
   width: 185px;
   height: 83px;
-
   background: #ffcccd;
   border-radius: 20px;
 }
@@ -12,80 +11,88 @@
   font-weight: 600;
   font-size: 26px;
   line-height: 44px;
-
   color: #000000;
 }
+
 .stress-rate {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 26px;
   line-height: 44px;
-
   width: 185px;
   height: 83px;
-
   border-radius: 20px;
-
   background-color: #8198d1;
-
   color: whitesmoke;
 }
 
 .upcoming-section-name {
-  /* Upcoming */
-
   width: 230px;
   height: 42px;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 44px;
-
   color: #000000;
 }
 
 .upcoming-event {
-  /* Rectangle 3320 */
-
   height: 67px;
-
   background: #ffffff;
-  /* border: 5px solid #ABABAB; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
 }
 
 .event-time {
-  /* Rectangle 3321 */
-
   width: 94px;
   height: 41px;
-
   background: #d9d9d9;
   border-radius: 8px;
-
-  /* 12:00 PM */
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-
   color: #000000;
 }
 
 .event-body {
-  /* Daily checkups */
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 27px;
+  color: #000000;
+}
 
+.dashboard-body {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.component-card {
+  width: 300px;
+  height: 200px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.component-card:hover {
+  transform: scale(1.05);
+}
+
+.component-card h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
   color: #000000;
 }
