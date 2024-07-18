@@ -46,8 +46,6 @@ function App() {
         <Route path='/level' element={<Level/>}/>
         <Route path='/activity' element={<Activities/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
-
-        
         <Route path='/quizgame' element={<QuizGame/>}/>
       </Routes>
     </BrowserRouter>
