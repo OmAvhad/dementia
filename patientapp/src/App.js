@@ -18,6 +18,7 @@ import SchedulePage from './pages/schedulePage/schedulePage';
 import SplashScreen from './pages/splashScreenpage/SplashScreen';
 import Level from './pages/level/Level';
 import FileUpload from './pages/uploadSensorData/UploadFile';
+import Activity from './pages/activities/activities'
 
 
 
@@ -42,6 +43,7 @@ function App() {
         <Route path='/splashscreen' element={<SplashScreen />}/>
         <Route path='/level' element={<Level/>}/>
         <Route path='/uploadfile' element={<FileUpload/>}/>
+        <Route path='/activities' element={<Activity/>}/>
         
       </Routes>
     </BrowserRouter>
