@@ -18,6 +18,7 @@ import SchedulePage from './pages/schedulePage/schedulePage';
 import SplashScreen from './pages/splashScreenpage/SplashScreen';
 import Level from './pages/level/Level';
 import FileUpload from './pages/uploadSensorData/UploadFile';
+import VirtualAssistant from './components/virtualAssistant/VirtualAssistant'
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/schedule' element={<SchedulePage />}/>
         <Route path='/profile' element={<ProfilePage />}/>
         <Route path='*' element={<NotFoundPage />}/>
+        <Route path='/va' element={<VirtualAssistant />}/>
 
         <Route path='/rag' element={<RAG />}/>
         <Route path='/onboarding' element={<Onboarding />}/>        
