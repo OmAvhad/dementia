@@ -20,15 +20,15 @@ function DashboardBody({ heartRate }) {
                 <span>Doctor's Appointment - 3:00 PM</span>
             </div>
         </div>
-    </Link>
-      <Link to="/virtual-nurse" className="nurse nurse-container flex flex-col items-center">
-        <img src={nurseIcon} alt="Nurse Icon" className="icon" />
-        <span>Virtual Nurse</span>
-      </Link>
-      <Link to="/activity" className="activity activity-container flex flex-col items-center">
-        <img src={activityIcon} alt="Activity Icon" className="icon" />
-        <span>Activity</span>
-      </Link>
+        </Link>
+        <Link to="/virtual-nurse" className="nurse nurse-container flex flex-col items-center">
+            <img src={nurseIcon} alt="Nurse Icon" className="icon" />
+            <span>Virtual Nurse</span>
+        </Link>
+        <Link to="/activity" className="activity activity-container flex flex-col items-center">
+            <img src={activityIcon} alt="Activity Icon" className="icon" />
+            <span>Activity</span>
+        </Link>
     </div>
   );
 }
