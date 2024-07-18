@@ -19,21 +19,19 @@ from langchain.chains import RetrievalQA
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_core.prompts import PromptTemplate
 from langchain_google_vertexai import VertexAIEmbeddings, VertexAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 import os
 import google.generativeai as genai
 import vertexai
-import google.auth
-
-# Setting up credentials
-credentials, _ = google.auth.default()
 
 
 load_dotenv()
 
-google_api_key = os.getenv('GOOGLE_API_KEY')
-genai.configure(api_key=google_api_key)
-vertexai.init(project="gen-lang-client-0193117932")
+gcp_api_key = os.getenv('GOOGLE_API_KEY')
+project_id = os.getenv('project')
+genai.configure(api_key=gcp_api_key)
+# vertexai.init(project="gen-lang-client-0193117932")
 
 model = genai.GenerativeModel('gemini-1.5-flash')
 
@@ -75,9 +73,6 @@ def get_embeddings():
         )
     return embeddings
 
-def get_llm(model_name):
-    llm = VertexAI(model_name=model_name)
-    return llm
 
 def get_response_llm( query):
     prompt_template = """
@@ -91,7 +86,8 @@ def get_response_llm( query):
     Assistant:
     """
     prompt = PromptTemplate(template=prompt_template, input_variables=['context', 'question'])
-    llm = get_llm(model_name="gemini-1.5-flash")
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash",google_api_key=gcp_api_key,
+                             temperature=0.2,convert_system_message_to_human=True)
 
     qa = RetrievalQA.from_chain_type(
         llm=llm,
