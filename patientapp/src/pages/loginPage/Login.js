@@ -5,8 +5,10 @@ import { FaGoogle } from 'react-icons/fa';
 const Login = () => {
   return (
     <div className="Login">
-      <div className="Ellipse1"></div>
-      <div className="Ellipse2"></div>
+      <div className="login-img">
+            <img src="signup.png" alt="Brain Icon" className="logo-signup" />
+            </div>
+      
       <div className="WelcomeBack">Welcome Back!<br/></div>
       <div className="TextField">
         <input type="email" className="Placeholder" placeholder="Enter E-mail" />
