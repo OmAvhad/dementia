@@ -8,7 +8,7 @@ import Login from './pages/loginPage/Login';
 import SignIn from './pages/signInPage/SignIn';
 import CommunityPage from './pages/communityPage/communityPage';
 import Onboarding from './pages/onboarding/Onboarding';
-import RAG from './pages/rag/RAG'
+// import RAG from './components/rag/RAG'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,7 +18,8 @@ import SchedulePage from './pages/schedulePage/schedulePage';
 import SplashScreen from './pages/splashScreenpage/SplashScreen';
 import Level from './pages/level/Level';
 import FileUpload from './pages/uploadSensorData/UploadFile';
-
+import VirtualNursePage from "./pages/virtualNursePage/virtualNursePage"
+import PersonlizedSearch from "./pages/personlizedSearchPage/personlizedSearchPage";
 
 function App() {
   return (
@@ -34,11 +35,13 @@ function App() {
         <Route path='/report' element={<ReportPage />}/>
         <Route path='/schedule' element={<SchedulePage />}/>
         <Route path='/profile' element={<ProfilePage />}/>
-        <Route path='/rag' element={<RAG />}/>
+        {/* <Route path='/rag' element={<RAG />}/> */}
         <Route path='/onboarding' element={<Onboarding />}/>
         <Route path='/splashscreen' element={<SplashScreen />}/>
         <Route path='/level' element={<Level/>}/>
         <Route path='/uploadfile' element={<FileUpload/>}/>
+        <Route path='/nurse' element={<VirtualNursePage/>}/>
+        <Route path='/psearch' element={<PersonlizedSearch/>}/>
         <Route path='*' element={<NotFoundPage />}/>
       </Routes>
     </BrowserRouter>

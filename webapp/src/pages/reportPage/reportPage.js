@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DashboardHeader from "../../components/dashboardHeader/dashboardHeader";
-import { LineChart } from '@mui/x-charts';
+import { LineChart, BarChart } from '@mui/x-charts';
 import axios from 'axios';
 import BottomNav from "../../components/bottomNav/bottomNav";
 import { toast } from "react-toastify";
@@ -64,17 +64,32 @@ function ReportPage() {
                     <CircularProgress/>
                 </div>
             ) : (
-                <div className="w-full flex flex-col justify-center items-center">
+                <div className="w-full flex flex-col justify-center items-center pb-14">
+                    <h2><b>Live Heart Rate</b></h2>
                     <LineChart
-                    xAxis={[{ data: [5, 10, 15, 20, 25, 30, 40, 45, 50] }]}
-                    series={[
-                        {
-                            data: data,
-                            color: 'red',
-                        },
-                    ]}
-                    width={400}
-                    height={300}
+                        xAxis={[{ data: [5, 10, 15, 20, 25, 30, 40, 45, 50] }]}
+                        series={[
+                            {
+                                data: data,
+                                color: 'red',
+                            },
+                        ]}
+                        width={400}
+                        height={300}
+                        grid={{ vertical: true, horizontal: true }}
+                    />
+                    <h2><b>Week Pattern</b></h2>
+                    <BarChart
+                        yAxis={[{ scaleType: 'band', data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] }]}
+                        series={[
+                            {
+                                data: [10, 5, 15, 20, 25, 30, 40],
+                                color: 'green',
+                            },
+                        ]}
+                        layout="horizontal"
+                        width={400}
+                        height={300}
                     />
                 </div>
             )}
