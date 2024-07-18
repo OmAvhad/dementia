@@ -84,7 +84,7 @@ function BottomNav() {
                 </defs>
               </svg>
             </div>
-            <p>Report</p>
+            <p>Community</p>
           </div>
         </div>
       </Link>
