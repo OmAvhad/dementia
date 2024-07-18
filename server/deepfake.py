@@ -53,4 +53,7 @@ def get_deepfake():
     
     
 if __name__ == '__main__':
+    # add cors
+    from flask_cors import CORS
+    CORS(app)
     app.run(debug=True)
