@@ -4,6 +4,7 @@ import { LineChart } from '@mui/x-charts';
 import axios from 'axios';
 import BottomNav from "../../components/bottomNav/bottomNav";
 import { toast } from "react-toastify";
+import API from "../../api";
 
 function ReportPage() {
     const [ data, setData ] = useState([]);
@@ -16,7 +17,7 @@ function ReportPage() {
     const [ws, setWs] = useState(null);
     
     useEffect(() => {
-        const websocket = new WebSocket('wss://wear-os.onrender.com');
+        const websocket = new WebSocket(API.socket_wearos);
     
         websocket.onopen = () => {
             console.log('WebSocket is connected');

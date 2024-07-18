@@ -34,11 +34,10 @@ function App() {
         <Route path='/schedule' element={<SchedulePage />}/>
         <Route path='/profile' element={<ProfilePage />}/>
         <Route path='/onboarding' element={<Onboarding />}/>
-        <Route path='*' element={<NotFoundPage />}/>
         <Route path='/splashscreen' element={<SplashScreen />}/>
         <Route path='/level' element={<Level/>}/>
         <Route path='/uploadfile' element={<FileUpload/>}/>
-        
+        <Route path='*' element={<NotFoundPage />}/>
       </Routes>
     </BrowserRouter>
     </>
