@@ -43,7 +43,7 @@ function VirtualNursePage() {
         setLoading(true);
         console.log(finalTranscript);
         getResponse(finalTranscript).then( async (data) => {
-        const createVideo = await axios.post("http://127.0.0.1:5000/create-talk", { input: data.answer });
+        const createVideo = await axios.post("http://192.168.1.194:5000/create-talk", { input: data.answer });
         console.log(createVideo);
         const video_id = createVideo.data.id;
         console.log(video_id);
@@ -56,7 +56,7 @@ function VirtualNursePage() {
     };
 
     const getVideo = async (video_id) => {
-      const videoResponse = await axios.get("http://127.0.0.1:5000/get-talk?id=" + video_id);
+      const videoResponse = await axios.get("http://192.168.1.194:5000/get-talk?id=" + video_id);
   
       // if undefined, call getVideo again
       if(videoResponse.data.result_url === undefined){

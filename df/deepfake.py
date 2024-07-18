@@ -24,7 +24,7 @@ def deepfake():
                     "fluent": "false",
                     "pad_audio": "0.0"
                 },
-                "source_url": "https://womensagenda.com.au/wp-content/uploads/2021/03/yasmin_poole.png"
+                "source_url": "https://i.ibb.co/DGPMBwK/nurse.jpg"
             }
     headers = {
         "accept": "application/json",
