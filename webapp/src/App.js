@@ -8,13 +8,14 @@ import Login from './pages/loginPage/Login';
 import SignIn from './pages/signInPage/SignIn';
 import CommunityPage from './pages/communityPage/communityPage';
 import Onboarding from './pages/onboarding/Onboarding';
+import RAG from './pages/rag/RAG'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReportPage from './pages/reportPage/reportPage';
 import ProfilePage from './pages/profilePage/profilePage';
 import SchedulePage from './pages/schedulePage/schedulePage';
-import SplashScreen from './pages/splashscreen/SplashScreen';
+import SplashScreen from './pages/splashScreenpage/SplashScreen';
 import Level from './pages/level/Level';
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path='/report' element={<ReportPage />}/>
         <Route path='/schedule' element={<SchedulePage />}/>
         <Route path='/profile' element={<ProfilePage />}/>
+        <Route path='/rag' element={<RAG />}/>
         <Route path='/onboarding' element={<Onboarding />}/>
         <Route path='*' element={<NotFoundPage />}/>
         <Route path='/splashscreen' element={<SplashScreen />}/>
