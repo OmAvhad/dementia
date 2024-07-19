@@ -23,7 +23,9 @@ const SignIn = () => {
             <div className="TextField">
                 <input type="password" className="Placeholder" placeholder="Re-enter password" />
             </div>
-            <button className="Button">Sign Up</button>
+            <button className="Button" onClick={()=>{
+                window.location.href = "/level"
+            }}>Next</button>
             <div className="AccountOptions">
                 <span>Already have an account?</span> <a href="#" className="Login">LOGIN</a>
             </div>

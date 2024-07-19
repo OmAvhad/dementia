@@ -24,7 +24,7 @@ const Login = () => {
       <button className="GoogleButton"><FaGoogle /> Login with Google</button>
       <a href="#" className="ForgotPassword">FORGOT PASSWORD ?</a>
       <div className="AccountOptions">
-        <span>Don’t have an account?</span> <a href="#" className="SignUp">Sign Up</a>
+        <span>Don’t have an account?</span> <a href="#" className="SignUp" onClick={()=>window.location.href = "/signup"}>Sign Up</a>
       </div>
       <div className="BarsHomeIndicator">
         {/* <div className="Line" /> */}
