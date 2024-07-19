@@ -15,7 +15,7 @@ function DashboardBody({ heartRate }) {
         <div className="sub-section">
             <h4 className="container-title">Recent Schedule : </h4>
             <div className="recent-schedule">
-                <span>Meeting with Team - 10:00 AM</span>
+                <span>Breakfast - 10:00 AM</span>
             </div>
             <div className="recent-schedule">
                 <span>Doctor's Appointment - 3:00 PM</span>
