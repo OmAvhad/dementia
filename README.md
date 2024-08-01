@@ -1,5 +1,7 @@
 # dementia
 
+## Architecture
+![image](https://github.com/user-attachments/assets/52bfa315-b7e2-417b-aa03-c70c358941ec)
 
 
 ## 🛠️Installation 
